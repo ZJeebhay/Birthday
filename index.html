@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Cake</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.cdnfonts.com/css/wigella" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="birthday-text">Happy 18th Birthday Kiara! 🎉</h1>
+        <div class="cake-container">
+            <div class="cake">
+                <div class="plate"></div>
+                <div class="layer layer-bottom"></div>
+                <div class="layer layer-middle"></div>
+                <div class="layer layer-top"></div>
+                <div class="icing"></div>
+                <div class="drip drip1"></div>
+                <div class="drip drip2"></div>
+                <div class="drip drip3"></div>
+                <div class="candle" onclick="blowOutCandle()">
+                    <div class="flame" id="flame"></div>
+                </div>
+            </div>
+        </div>
+        <p class="footer-text">Developed by Zaheer (partially) | Made with 💙 and a lot of sleepless nights</p>
+    </div>
+    <canvas id="confetti"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>

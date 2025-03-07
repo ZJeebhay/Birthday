@@ -1,0 +1,140 @@
+@import url('https://fonts.cdnfonts.com/css/wigella');
+
+body {
+    background-color: #FFD1DC; /* Light pink */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    color: black;
+    font-family: 'Monarda'
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.birthday-text {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 100px; /* Increased space above cake */
+}
+
+.cake-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.cake {
+    position: relative;
+    width: 250px;
+    height: 200px;
+}
+
+.plate {
+    width: 270px;
+    height: 110px;
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    box-shadow: 0 5px 40px rgba(0, 0, 0, 0.5);
+}
+
+.layer {
+    position: absolute;
+    width: 250px;
+    height: 100px;
+    background-color: #412b09; /* Chocolate color */
+    border-radius: 50%;
+    box-shadow:
+        0 -5px 0px #6d4b1d, /* Top line */
+        0 5px 0px #653e07;  /* Bottom line */
+}
+
+/* Adjust positions for correct layering */
+.layer-top { top: 0px; }
+.layer-middle { top: 33px; }
+.layer-bottom { top: 66px; }
+
+.icing {
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    background-color: #f0e4d0;
+    width: 240px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.drip {
+    position: absolute;
+    width: 50px;
+    height: 60px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: #f0e4d0;
+}
+
+.drip1 { top: 53px; left: 5px; height: 48px; width: 40px; }
+.drip2 { top: 69px; left: 181px; }
+.drip3 { top: 54px; left: 90px; width: 80px; }
+
+.candle {
+    position: absolute;
+    background-color: #7B020B;
+    width: 16px;
+    height: 50px;
+    border-radius: 8px / 4px;
+    top: -20px;
+    left: 50%;
+    margin-left: -8px;
+    cursor: pointer;
+}
+
+.flame {
+    position: absolute;
+    background-color: orange;
+    width: 15px;
+    height: 35px;
+    border-radius: 10px / 25px;
+    top: -34px;
+    left: 50%;
+    margin-left: -7.5px;
+    box-shadow: 0 0 60px rgba(255, 140, 0, 0.5);
+    animation: flicker 1s ease-in-out alternate infinite;
+}
+
+@keyframes flicker {
+    0%, 100% { transform: skewX(5deg); }
+    25%, 75% { transform: skewX(-5deg); }
+    50% { transform: skewX(10deg); }
+}
+
+.footer-text {
+    position: relative;
+    margin-top: 70px; /* Increased spacing below cake */
+    font-size: 16px;
+    opacity: 0.8;
+    text-align: center;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    display: none;
+}
